@@ -98,6 +98,7 @@ public class AaSample {
 
         headers.setContentLength(file.length());
         headers.setContentType(MediaType.parseMediaType(Files.probeContentType(path)));
+        //Adding a comment to see if it is dropped
         return new ResponseEntity<byte[]>(IOUtils.toByteArray(targetStream), headers, HttpStatus.CREATED);
     }
 
